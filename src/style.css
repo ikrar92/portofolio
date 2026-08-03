@@ -7,39 +7,34 @@
   --animate-fade-in: fadeIn 0.8s ease-out forwards;
   --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
   --animate-pulse-subtle: pulseSubtle 3s infinite ease-in-out;
+}
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
+/* Keyframes ditaruh di luar @theme */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
   }
+}
 
-  @keyframes pulseSubtle {
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-    0%,
-    100% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(1.03);
-    }
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
   }
 }
 
