@@ -8,7 +8,7 @@ const educationList = ref([
     major: 'Pendidikan Menengah Pertama',
     period: '2017 - 2020',
     description: 'Membangun fondasi akademik yang kuat dalam logika dasar, komunikasi formal, serta keorganisasian dan literasi digital.',
-    logo: '/smpn4-logo.png',
+    logo: 'smpn4-logo.png',
     skills: ['Logika & Sains Dasar', 'Literasi Digital', 'Kepemimpinan Siswa']
   },
   {
@@ -16,7 +16,7 @@ const educationList = ref([
     major: 'Teknik Komputer dan Jaringan',
     period: '2020 - 2023',
     description: 'Berfokus pada tata kelola administrasi teknis, manajemen sistem informasi, arsitektur jaringan komputer, serta analisis & pengolahan data.',
-    logo: '/logo stm.png',
+    logo: 'logo stm.png',
     skills: ['Teknik Komputer & Jaringan', 'Administrasi Server', 'Analisis Data & Troubleshooting']
   },
    {
@@ -24,7 +24,7 @@ const educationList = ref([
     major: 'Sistem Informasi',
     period: '2023 - Sekarang',
     description: 'Berfokus pada Analisis & Perancangan Sistem, Software Development, Data & Information Management.',
-    logo: '/logo univeritas terbuka-Photoroom.png',
+    logo: 'logo univeritas terbuka-Photoroom.png',
     skills: ['Business & Systems Analysis', 'Technical Skills', 'IT Management & Governance']
    }
 ])

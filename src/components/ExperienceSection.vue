@@ -2,6 +2,11 @@
 import { ref } from 'vue'
 import { Calendar, Briefcase, Users, Eye } from 'lucide-vue-next'
 
+// Fungsi penanganan path gambar dinamis untuk GitHub Pages
+const getImageUrl = (name) => {
+  return `${import.meta.env.BASE_URL}${name}`
+}
+
 // Tab state: 'work' atau 'organization'
 const activeTab = ref('work')
 
@@ -12,7 +17,7 @@ const experiences = ref([
     company: 'Magang di Maspion IT Square Surabaya',
     period: '3 Januari 2022 - 30 Juli 2022',
     description: 'Bertanggung jawab atas pemeliharaan, pemeliharaan sistem, perbaikan perangkat keras (hardware), dan optimasi perangkat lunak (software) pada laptop maupun komputer. Berperan penting dalam memastikan keandalan operasional perangkat lunak dan fisik, meminimalkan downtime, serta memberikan solusi troubleshooting yang efisien dan terstruktur bagi pengguna individu maupun organisasi.',
-    image: '/WhatsApp Image 2026-08-01 at 23.21.22.png',
+    image: 'WhatsApp Image 2026-08-01 at 23.21.22.png',
     skills: ['Penggantian Komponen', 'Manajemen Thermal', 'Logika Troubleshooting', 'Manajemen Driver & Firmware'],
     stats: [
       { label: 'Akurasi Perbaikan', value: '99.8%' },
@@ -24,7 +29,7 @@ const experiences = ref([
     company: 'WAHANA SPAREPART',
     period: '15 Agustus 2023 - 4 Mei 2025',
     description: 'Menggabungkan keahlian dukungan administratif tingkat tinggi dengan eksekusi teknis operasional e-commerce. Berperan sebagai tangan kanan eksekutif/pemilik bisnis dalam mengelola penjadwalan, korespondensi, dan koordinasi internal, sekaligus bertanggung jawab penuh atas kelancaran operasional toko online (Shopee, Tokopedia, TikTok Shop, dll.), manajemen inventaris, integrasi data penjualan, dan optimasi traffic e-commerce.',
-    image: '/admin.png',
+    image: 'admin.png',
     skills: ['Manajemen Jadwal & Agenda', 'Korespondensi & Dokumen Bisnis', 'Tren Fast-Moving', 'Pencatatan Transaksi'],
     stats: [
       { label: 'Analisis Tren', value: 'Harian' },
@@ -36,7 +41,7 @@ const experiences = ref([
     company: 'HAVANA SPAREPART',
     period: '5 Mei 2025 - Sekarang',
     description: 'Fokus di bidang logistik dan operasional pergudangan yang bertanggung jawab atas efisiensi alur keluar-masuk barang (inbound & outbound), ketepatan inventaris, serta optimasi tata letak penyimpanan gudang. Berperan strategis dalam menjamin akurasi data stok, meminimalkan selisih inventory, serta memastikan seluruh proses pemenuhan pesanan (order fulfillment) dan pengiriman barang berjalan tepat waktu sesuai standar operasional (SLA).',
-    image: '/gudang.png',
+    image: 'gudang.png',
     skills: ['Manajemen Inbound & Outbound Logistik', 'Stock Control', 'Tata Kelola & Layout Gudang', 'Koordinasi Pemenuhan Pesanan (Fulfillment)'],
     stats: [
       { label: 'Akurasi Stok', value: '97,8%' },
@@ -52,7 +57,7 @@ const organizations = ref([
     company: '',
     period: '2017 - 2023',
     description: 'Menjalani pelatihan kedisiplinan dan kepemimpinan intensif untuk menjalankan tugas pengibaran bendera dengan tingkat presisi, sinkronisasi, dan akurasi tinggi. Berperan aktif dalam menjaga kekompakan formasi tim, mengelola manajemen waktu latihan yang ketat, serta mempertahankan fokus dan ketahanan fisik-mental di bawah tekanan operasional lapangan.',
-    image: '/paskibraka.png', // Ganti dengan foto dokumentasi kegiatan Anda
+    image: 'paskibraka.png',
     skills: ['Kedisiplinan & Ketahanan Mental', 'Kerja Sama Tim (Teamwork)', 'Manajemen Waktu', 'Eksekusi Presisi'],
     stats: [
       { label: 'Kejuaraan Tingkat Kabupaten', value: '4' },
@@ -64,7 +69,7 @@ const organizations = ref([
     company: '',
     period: '2017 - 2022',
     description: 'Berkontribusi aktif dalam perancangan, perencanaan, dan eksekusi berbagai program kerja sekolah serta acara berskala internal maupun eksternal. Bertanggung jawab atas koordinasi operasional di lapangan, pengelolaan kebutuhan logistik, serta menjaga komunikasi yang efektif antar pengurus dan pihak sekolah demi memastikan keberhasilan pelaksanaan kegiatan.',
-    image: '/sis.png', // Ganti dengan foto dokumentasi kegiatan Anda
+    image: 'sis.png',
     skills: ['Event Management', 'Koordinasi Tim', 'Komunikasi Antar Divisi', 'Manajemen Operasional'],
     stats: [
       { label: 'Eksekusi Tepat Waktu', value: '100%' },
@@ -76,7 +81,7 @@ const organizations = ref([
     company: '',
     period: '2020 - 2022',
     description: 'Bertanggung jawab atas perancangan, pengelolaan, dan eksekusi program kerja keorganisasian serta kegiatan lapangan berskala besar. Memimpin koordinasi tim, mengelola manajemen risiko operasional saat kegiatan luar ruang (outdoors), serta melatih anggota dalam keterampilan teknis, kedisiplinan, dan pemecahan masalah secara terstruktur.',
-    image: '/pramuka.png', // Ganti dengan foto dokumentasi kegiatan Anda
+    image: 'pramuka.png',
     skills: ['Leadership & Team Management', 'Manajemen Risiko Operasional', 'Problem Solving di Lapangan', 'Navigasi & Perencanaan Teknis'],
     stats: [
       { label: 'Manajemen Risiko', value: 'Zero Accident' },
@@ -88,7 +93,7 @@ const organizations = ref([
     company: '',
     period: '2019 - 2020',
     description: 'Berkontribusi aktif sebagai pemain inti dalam membangun komunikasi, strategi permainan, dan eksekusi taktik tim di lapangan. Terbiasa mengambil keputusan krusial secara cepat di bawah tekanan kompetitif, menjaga kedisiplinan jadwal latihan fisik, serta menjunjung tinggi sportivitas dan efisiensi koordinasi lintas posisi.',
-    image: '/futsal.png', // Ganti dengan foto dokumentasi kegiatan Anda
+    image: 'futsal.png',
     skills: ['Kerja Sama Tim (Teamwork)', 'Pengambilan Keputusan Cepat', 'Komunikasi Taktis', 'Ketahanan Mental & Fisik'],
     stats: [
       { label: 'Koordinasi Lapangan', value: 'High Agility' },
@@ -216,7 +221,7 @@ const organizations = ref([
             </div>
             
             <img 
-              :src="item.image" 
+              :src="getImageUrl(item.image)" 
               :alt="`Bukti ${item.role}`" 
               class="w-full h-auto object-cover max-h-[360px] mx-auto transition-transform duration-500 group-hover:scale-[1.02]"
             />
