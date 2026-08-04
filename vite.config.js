@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs.plugin-vue'
+import vue from '@vitejs/plugin-vue' // <-- Pastikan pakai slash / bukan titik .
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
@@ -7,5 +7,5 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
-  base: '/', // <-- Pastikan nilainya adalah '/'
+  base: '/',
 })
